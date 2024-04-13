@@ -18,14 +18,14 @@ mnist_test_labels = idx2numpy.convert_from_file('data/t10k-labels.idx1-ubyte')
 
 # Visualizing the dataset
 
-# # Print the first 5 images and their labels from the training dataset
-# for i in range(5):
-#     plt.subplot(1, 5, i + 1)
-#     plt.imshow(mnist_train_img[i], cmap='gray')
-#     plt.title(f"Label: {mnist_train_labels[i]}")
-#     plt.axis('off')
+# Print the first 5 images and their labels from the training dataset
+for i in range(5):
+    plt.subplot(1, 5, i + 1)
+    plt.imshow(mnist_train_img[i], cmap='gray')
+    plt.title(f"Label: {mnist_train_labels[i]}")
+    plt.axis('off')
 
-# plt.show()
+plt.show()
 
 ##############################################################
 
@@ -34,15 +34,14 @@ mnist_test_labels = idx2numpy.convert_from_file('data/t10k-labels.idx1-ubyte')
 ## TODO TASK 5 : UNCOMMENT THE CODE BELOW AND RUN THE PYTHON FILE TO TRAIN THE MODEL
 
 # Create a RandomForestClassifier
-# Task 
-model = RandomForestClassifier(n_estimators=500, random_state=42) 
+# model = RandomForestClassifier(n_estimators=50, random_state=42) 
 
-# Train the model
-model.fit(mnist_train_img.reshape(-1, 28*28), mnist_train_labels)
+# # Train the model
+# model.fit(mnist_train_img.reshape(-1, 28*28), mnist_train_labels)
 
-# Make predictions on the test data
-predictions = model.predict(mnist_test_img.reshape(-1, 28*28))
+# # Make predictions on the test data
+# predictions = model.predict(mnist_test_img.reshape(-1, 28*28))
 
-# Evaluate the accuracy of the model
-accuracy = accuracy_score(mnist_test_labels, predictions)
-print("Accuracy:", accuracy)
+# # Evaluate the accuracy of the model
+# accuracy = accuracy_score(mnist_test_labels, predictions)
+# print("Accuracy:", accuracy)
